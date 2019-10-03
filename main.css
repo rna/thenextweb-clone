@@ -42,13 +42,52 @@ article > div:nth-child(3){
 }
 
 /* Latest News Grid */
-.news-grid {
+.news-grid, .deals-grid {
     display: grid;
     grid-template: repeat(2,1fr)/repeat(4,1fr);
     grid-gap: 10px;
 }
 
-.news-grid div {
+.news-grid div, .deals-grid div {
     height: 200px;
     background-color: aqua;
+}
+
+/* Microsoft Grid */
+.microsoft-grid, .funding-grid {
+    display: grid;
+    grid-template: repeat(1,1fr)/repeat(4,1fr);
+    grid-gap: 10px;
+}
+
+.microsoft-grid div, .funding-grid div {
+    height: 200px;
+    background-color: pink;
+}
+
+.funding-grid div {
+    height: 200px;
+    background-color: red;
+}
+
+/* popular Grid */
+.popular-grid {
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(3,1fr);
+    grid-gap: 10px;
+}
+
+.popular-grid div {
+    height: 400px;
+    background-color: violet;
+}
+
+footer nav {
+    background-color: gray;
+    color: white
+}
+
+footer p {
+    background-color: black;
+    color: white;
 }
