@@ -1,0 +1,54 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+/* Header Styles */
+header nav:first-child{
+    background-color: black;
+    color:white;
+}
+
+header nav:last-child{
+    background-color: white;
+}
+
+header>div {
+    background-color: darkgoldenrod;
+}
+
+/* Main Grid Styles */
+article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+article > div:nth-child(1){
+    grid-row:1/3;
+    background-color: blue;
+    height:300px;
+}
+
+article > div:nth-child(2){
+    background-color: orchid;
+    height:150px;
+}
+
+article > div:nth-child(3){
+    background-color: green;
+    height:150px;
+}
+
+/* Latest News Grid */
+.news-grid {
+    display: grid;
+    grid-template: repeat(2,1fr)/repeat(4,1fr);
+    grid-gap: 10px;
+}
+
+.news-grid div {
+    height: 200px;
+    background-color: aqua;
+}
