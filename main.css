@@ -195,13 +195,13 @@ article div:not(:first-child) {
     grid-gap: 10px;
 }
 
-.news-grid img {
+.news-grid img, .microsoft-grid img {
     width: 100%;
     height: auto;
     cursor: pointer;
 }
 
-.news-grid figcaption{
+.news-grid figcaption, .microsoft-grid figcaption {
     color:black;
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 16px;
@@ -210,25 +210,20 @@ article div:not(:first-child) {
     cursor: pointer;
 }
 
-.news-grid figcaption:hover{
+.news-grid figcaption:hover, .microsoft-grid figcaption:hover {
     color:#ff4422;
     text-decoration: underline;
 }
 
-.news-grid p, .news-grid a{
+.news-grid p, .news-grid a, .microsoft-grid p, .microsoft-grid a {
     color:grey;
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 10px;
     text-decoration: none;
 }
-.news-grid a:hover {
+.news-grid a:hover, .microsoft-grid a:hover {
     color: black;
 }
-
-/* .news-grid div, .deals-grid div {
-    height: 200px;
-    background-color: aqua;
-} */
 
 /* Microsoft Grid */
 .microsoft-grid, .funding-grid {
