@@ -1,23 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Merriweather+Sans|Port+Lligat+Sans&display=swap');
+/*
+font-family: 'Heebo', sans-serif;
+font-family: 'Port Lligat Sans', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+*/
+
 * {
     margin:0;
     padding: 0;
 }
 
 /* Header Styles */
-header nav:first-child{
-    background-color: black;
-    color:white;
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-header nav:last-child{
+header nav:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    font-family:'Heebo', sans-serif;
+    font-size: 14px;
+    height: 30px;
+}
+
+header nav:first-child ul,
+header nav:nth-child(2) ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin:0 20px;
+}
+
+header nav:first-child li,
+header nav:nth-child(2) li {
+    margin-right: 10px;
+}
+
+header a, header i {
+    text-decoration: none;
+    color: grey;
+}
+
+header nav:first-child a:hover {
+    color: white;
+}
+
+header nav:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: white;
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: 14px;
+    height: 45px;
+    font-weight: 700;
+}
+
+header nav:nth-child(2) a:hover {
+    color: black;
+}
+
+header button {
+    padding: 15px;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid lightgrey;
 }
 
 header>div {
-    background-color: darkgoldenrod;
+    background-color: #ffdd33;
+    font-family:'Heebo', sans-serif;
+    font-size: 12px;
+    padding:5px 20px;
 }
 
 /* Main Grid Styles */
+main{
+    padding-top: 105px;
+}
 article {
     display: grid;
     grid-template-columns: 2fr 1fr;
