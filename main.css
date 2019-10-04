@@ -8,6 +8,7 @@ font-family: 'Merriweather Sans', sans-serif;
 * {
     margin:0;
     padding: 0;
+    font-family: 'Heebo', sans-serif;
 }
 
 /* Header Styles */
@@ -82,6 +83,15 @@ header>div {
 main{
     padding-top: 105px;
 }
+
+.grid-heading {
+    color:#ff4422;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Article Section Styles */
 article {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -106,13 +116,8 @@ article > div:nth-child(3){
     height:220px;
 }
 
-article .logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-article p a {
+article p a,
+article a:hover {
     color: white;
 }
 
@@ -130,43 +135,58 @@ article img {
      height: 150px;
 }
 
-article a:hover {
-    color: white;
-}
-
 article a, article i {
     text-decoration: none;
-    color: grey;
+    color: lightgray;
 }
 
-article a:hover {
-    color: white;
-}
-
-article .text{
+article >div:first-child {
     display:flex;
-    justify-content:flex-start;
-    align-items:flex-end;
+    flex-direction: column;
+    justify-content:space-between;
 }
 
-article > div > div {
+article .logo > div {
+    display:flex;
+    justify-content:space-between;
+    margin-top: 1%;
+}
+
+article .text {
     display: block;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
 
-article > div > div > ul > li {
-    color: gray;
-}
-
-article > div > div > ul{
+article .text ul{
     display: flex;
     justify-content: flex-start;
     align-content: flex-end;
     list-style: none;
 }
 
-/* Latest News Grid */
+article .text ul > li , 
+article a, 
+.logo p {
+    color: lightgray;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+article div:not(:first-child) p:last-of-type a{
+    font-size: 28px;
+}
+
+article div:not(:first-child) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+/* Latest News Grid  & Deals Grid */
+
 .latest {
-    margin: 100px;
+    margin: 50px 100px;
 }
 
 .news-grid, .deals-grid {
@@ -175,10 +195,40 @@ article > div > div > ul{
     grid-gap: 10px;
 }
 
-.news-grid div, .deals-grid div {
+.news-grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.news-grid figcaption{
+    color:black;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.news-grid figcaption:hover{
+    color:#ff4422;
+    text-decoration: underline;
+}
+
+.news-grid p, .news-grid a{
+    color:grey;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
+}
+.news-grid a:hover {
+    color: black;
+}
+
+/* .news-grid div, .deals-grid div {
     height: 200px;
     background-color: aqua;
-}
+} */
 
 /* Microsoft Grid */
 .microsoft-grid, .funding-grid {
