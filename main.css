@@ -91,18 +91,27 @@ article {
 
 article > div:nth-child(1){
     grid-row:1/3;
-    background-color: blue;
-    height:300px;
+    background: url(./images/water-crossing.jpg);
+    height:450px;
 }
 
 article > div:nth-child(2){
-    background-color: orchid;
-    height:150px;
+    background: url(./images/calories.png);
+    height:220px;
 }
 
 article > div:nth-child(3){
-    background-color: green;
-    height:150px;
+    background:url(./images/china-malware.jpg);
+    height:220px;
+}
+
+article a, article i {
+    text-decoration: none;
+    color: grey;
+}
+
+article a:hover {
+    color: white;
 }
 
 /* Latest News Grid */
