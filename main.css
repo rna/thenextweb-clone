@@ -91,18 +91,47 @@ article {
 
 article > div:nth-child(1){
     grid-row:1/3;
-    background: url(./images/water-crossing.jpg);
+    background: linear-gradient(to bottom right, rgba(231, 39, 39, 0.73), rgba(245, 246, 252, 0.05)),
+url(./images/water-crossing.jpg);
     height:450px;
 }
 
 article > div:nth-child(2){
-    background: url(./images/calories.png);
+    background: linear-gradient(to bottom,  rgba(36, 35, 35, 0.73), rgba(0, 0, 0, 0.05)), url(./images/calories.png);
     height:220px;
 }
 
 article > div:nth-child(3){
     background:url(./images/china-malware.jpg);
     height:220px;
+}
+
+article .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+article p a {
+    color: white;
+}
+
+article p:first-of-type a {
+    font-size: 16px;
+}
+
+article p:last-of-type a {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+article img {
+     width: 400px;
+     height: 150px;
+}
+
+article a:hover {
+    color: white;
 }
 
 article a, article i {
@@ -112,6 +141,27 @@ article a, article i {
 
 article a:hover {
     color: white;
+}
+
+article .text{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+
+article > div > div {
+    display: block;
+}
+
+article > div > div > ul > li {
+    color: gray;
+}
+
+article > div > div > ul{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-end;
+    list-style: none;
 }
 
 /* Latest News Grid */
