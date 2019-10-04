@@ -42,6 +42,10 @@ article > div:nth-child(3){
 }
 
 /* Latest News Grid */
+.latest {
+    margin: 100px;
+}
+
 .news-grid, .deals-grid {
     display: grid;
     grid-template: repeat(2,1fr)/repeat(4,1fr);
@@ -91,3 +95,9 @@ footer p {
     background-color: black;
     color: white;
 }
+
+
+/* -------------------
+     Media Queries 
+---------------------- */
+
