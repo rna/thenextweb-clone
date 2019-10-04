@@ -96,8 +96,59 @@ footer p {
     color: white;
 }
 
-
 /* -------------------
      Media Queries 
----------------------- */
+---------------------- */   
+@media  screen and (max-width: 1024px) {
 
+    article {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .news-grid, .deals-grid {
+        grid-template: repeat(3,1fr)/repeat(3,1fr);
+    }
+
+    .microsoft-grid, .funding-grid {
+        grid-template: repeat(2,1fr)/repeat(3,1fr);
+    }
+
+    .funding-grid {
+        display: none;
+    }
+
+    .funding-grid > div:nth-child(4){
+         visibility: hidden;
+    }
+
+    .popular-grid {
+        grid-template: repeat(4,1fr)/repeat(2,1fr);
+    }
+}   
+
+@media screen and (max-width: 768px) {
+
+    article {
+        grid-template-columns: 1fr;
+    }
+
+    .news-grid, .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .microsoft-grid, .funding-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .funding-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .funding-grid > div:nth-child(4){
+         visibility: hidden;
+    }
+
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+}
