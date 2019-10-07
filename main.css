@@ -219,9 +219,9 @@ article div:not(:first-child) {
   cursor: pointer;
 }
 
-.news-grid figcaption,
-.microsoft-grid figcaption,
-.deals-grid figcaption {
+.news-grid .img-caption,
+.microsoft-grid .img-caption,
+.deals-grid .img-caption {
   color: black;
   font-family: "Merriweather Sans", sans-serif;
   font-size: 16px;
@@ -230,9 +230,9 @@ article div:not(:first-child) {
   cursor: pointer;
 }
 
-.news-grid figcaption:hover,
-.microsoft-grid figcaption:hover,
-.deals-grid figcaption:hover,
+.news-grid .img-caption:hover,
+.microsoft-grid .img-caption:hover,
+.deals-grid .img-caption:hover,
 .imgs-container > div:nth-child(2) p:last-of-type a:hover {
   color: #ff4422;
   text-decoration: underline;
