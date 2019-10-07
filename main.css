@@ -233,14 +233,86 @@ article div:not(:first-child) {
     grid-gap: 10px;
 }
 
-.microsoft-grid div, .funding-grid div {
+.microsoft-grid div {
     height: 200px;
     background-color: pink;
 }
 
-.funding-grid div {
-    height: 200px;
-    background-color: red;
+/* Funding Grid Styles */
+.funding-grid-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom:20px;
+    cursor: pointer;
+}
+
+.funding-grid-head ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.funding-grid-head li {
+    color:#ff4422;
+}
+.funding-grid-head a{
+    text-decoration: none;
+    padding: 0 5px;
+    color:#ff4422;
+}
+
+.funding-grid-head a:hover{
+    color:black;
+}
+
+.funding-grid>div {
+    position: relative;
+    background-color:#FFFAF8;
+}
+
+.funding-grid div>img {
+    width: 60px;
+    height: 60px;
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+
+.funding-grid .company {
+    display:flex;
+    flex-direction:column;
+}
+
+.funding-grid h4 {
+    background-color: #FF4422;
+    padding: 10px 0 10px 80px;
+}
+
+.company>div{
+    background-color: #FFEBE8;
+    padding: 10px 0 10px 80px;
+}
+
+.funding-grid > div > ul {
+    list-style: none;
+    padding-left: 10px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 14px;
+}
+.funding-grid > div > ul li {
+    margin: 10px 0;
+}
+
+.funding-grid > div > ul li a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.funding-grid > div > ul li:last-child {
+    border-top:2px solid #FFEBE8;
+    padding: 20px 0;
+    font-size: 12px;
 }
 
 /* popular Grid */
