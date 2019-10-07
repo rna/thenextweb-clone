@@ -105,6 +105,9 @@ article > div:nth-child(1){
     background: linear-gradient(to bottom right, rgba(231, 39, 39, 0.73), rgba(245, 246, 252, 0.05)),
 url(./images/water-crossing.jpg);
     height:450px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
 
 article > div:nth-child(2){
@@ -139,12 +142,6 @@ article img {
 article a, article i {
     text-decoration: none;
     color: lightgray;
-}
-
-article >div:first-child {
-    display:flex;
-    flex-direction: column;
-    justify-content:space-between;
 }
 
 article .logo > div {
@@ -503,13 +500,33 @@ footer p>a:nth-child(2) {
 }
 
 @media  screen and (max-width: 1024px) {
+    .latest {
+        margin: 10px;
+    }
 
     article .logo {
         display: none;
     }
+
     article > div:nth-child(1){
         background: url(./images/water-crossing.jpg);
         height:250px;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    article > div:nth-child(2),
+    article > div:nth-child(3) {
+        height:122px;
+    }
+
+    article p:last-of-type a {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    article > div:nth-child(3) > div > p:nth-child(1) > a{
+        display: none;
     }
 
     article {
@@ -520,16 +537,16 @@ footer p>a:nth-child(2) {
         grid-template: repeat(3,1fr)/repeat(3,1fr);
     }
 
-    .microsoft-grid, .funding-grid {
+    .microsoft-grid {
         grid-template: repeat(2,1fr)/repeat(3,1fr);
     }
 
     .funding-grid {
-        display: none;
+        grid-template: repeat(1,1fr)/repeat(3,1fr);
     }
 
     .funding-grid > div:nth-child(4){
-         visibility: hidden;
+         display: none;
     }
 
     .popular-grid {
