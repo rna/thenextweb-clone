@@ -89,6 +89,7 @@ main{
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 32px;
     font-weight: bold;
+    padding-bottom:15px;
 }
 
 /* Article Section Styles */
@@ -238,6 +239,11 @@ article div:not(:first-child) {
     background-color: pink;
 }
 
+.microsoft-grid a{
+    text-decoration: none;
+    color:grey;
+}
+
 /* Funding Grid Styles */
 .funding-grid-head {
     display: flex;
@@ -282,6 +288,7 @@ article div:not(:first-child) {
 .funding-grid .company {
     display:flex;
     flex-direction:column;
+    cursor: pointer;
 }
 
 .funding-grid h4 {
@@ -315,12 +322,20 @@ article div:not(:first-child) {
     font-size: 12px;
 }
 
+.funding-grid i.fa{
+    padding-right:10px;
+}
+
 /* popular Grid */
 .popular-grid {
     display: grid;
     grid-template: repeat(3,1fr)/repeat(3,1fr);
     grid-auto-rows: minmax(400px, auto);
     grid-gap: 10px;
+}
+
+.popular-grid > div {
+    padding-bottom: 30px;
 }
 
 .imgs-container > div:first-child {
@@ -365,15 +380,18 @@ article div:not(:first-child) {
 
 .app-img .text p:first-of-type {
     font-size: 12px;
+    padding-left:10px;
 }
 
 .app-img .text p:last-of-type {
     font-weight: 700;
     font-size: 16px;
+    padding-left:10px;
 }
 
 .popular-grid ul {
     list-style: none;
+    padding-left: 5px;
  }
 
 .popular-grid > div > ul li::before {
@@ -393,7 +411,7 @@ article div:not(:first-child) {
 .popular-grid ul li a {
     text-decoration: none;
     color: gray;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .popular-grid ul li a:hover {
@@ -409,22 +427,90 @@ article div:not(:first-child) {
     text-decoration: line-through;
     font-size: 12px;
 }
+
+.deals-grid figure {
+    padding-bottom: 20px;
+}
 /* Footer styles */
 
-footer nav {
-    background-color: gray;
-    color: white
+
+footer nav{
+    background-color: #131313;
+    padding:30px 0;
+}
+footer nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
 }
 
-footer p {
-    background-color: black;
+footer nav li{
+    padding-right: 20px;
+}
+
+footer nav ul:nth-child(2){
+    padding: 20px 0;
+    font-size:12px;
+}
+
+footer nav ul:nth-child(2) a{
+    text-decoration: none;
+    color: lightgray;
+}
+
+footer nav ul:nth-child(2) a:hover{
+    color:white;
+    font-weight:500;
+}
+
+footer i {
     color: white;
+}
+footer i.fa {
+    display: inline-block;
+    border-radius: 50%;
+    padding:10px;
+    background-color:#333;
+    border:2px solid #333;
+}
+
+footer i.fa:hover {
+    background-color:transparent;
+}
+
+footer p{
+    background-color: black;
+    padding:20px 0;
+    text-align:center;
+    color:grey;
+    font-size: 12px;
+}
+
+footer p>a:nth-child(2) {
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: 14px; 
+    color:white;
 }
 
 /* -------------------
      Media Queries 
 ---------------------- */   
+@media screen and (min-width:1024px){
+    .latest {
+        margin: 5% 3%;
+    }
+}
+
 @media  screen and (max-width: 1024px) {
+
+    article .logo {
+        display: none;
+    }
+    article > div:nth-child(1){
+        background: url(./images/water-crossing.jpg);
+        height:250px;
+    }
 
     article {
         grid-template-columns: 2fr 1fr;
