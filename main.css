@@ -1,0 +1,694 @@
+/*
+font styles used:
+font-family: 'Heebo', sans-serif;
+font-family: 'Port Lligat Sans', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+*/
+@import url("https://fonts.googleapis.com/css?family=Heebo|Merriweather+Sans|Port+Lligat+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+footer nav {
+  background-color: #131313;
+  padding: 30px 0;
+}
+
+header nav:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  font-family: "Heebo", sans-serif;
+  font-size: 14px;
+  height: 30px;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.popular-grid ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.funding-grid-head ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.funding-grid > div > ul {
+  list-style: none;
+  padding-left: 10px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 14px;
+}
+
+header nav:first-child ul,
+header nav:nth-child(2) ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 20px;
+}
+
+footer nav ul:nth-child(2) {
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+.article-box .text ul,
+.app-img .text ul {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-end;
+  list-style: none;
+}
+
+footer nav li {
+  padding-right: 20px;
+}
+
+.funding-grid-head li {
+  color: #f42;
+}
+
+.popular-grid ul li {
+  padding: 2%;
+  border-bottom: 1px solid gray;
+}
+
+header nav:first-child li,
+header nav:nth-child(2) li {
+  margin-right: 10px;
+}
+
+footer p {
+  background-color: black;
+  padding: 20px 0;
+  text-align: center;
+  color: grey;
+  font-size: 12px;
+}
+
+.funding-grid > div > ul li {
+  margin: 10px 0;
+}
+
+header a,
+header i,
+.news-grid p,
+.news-grid a,
+.microsoft-grid p,
+.deals-grid p,
+.deals-grid a,
+.microsoft-grid a {
+  text-decoration: none;
+  color: grey;
+}
+
+.article .text ul > li,
+.app-img .text ul > li,
+.article a,
+.logo p {
+  color: lightgray;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+footer i {
+  color: white;
+}
+
+.article a,
+.article i {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.news-grid p,
+.news-grid a,
+.microsoft-grid p,
+.deals-grid p,
+.deals-grid a {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 10px;
+}
+
+.funding-grid-head a {
+  text-decoration: none;
+  padding: 0 5px;
+  color: #f42;
+}
+
+.article-box p a {
+  color: white;
+}
+
+footer p > a:nth-child(2) {
+  font-family: "Port Lligat Sans", sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.popular-grid ul li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+}
+
+footer nav ul:nth-child(2) a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.funding-grid > div > ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article a:hover {
+  color: white;
+}
+
+.app-img .text a {
+  text-decoration: none;
+  color: white;
+}
+
+.funding-grid-head a:hover {
+  color: black;
+}
+
+.news-grid a:hover,
+.microsoft-grid a:hover,
+.deals-grid a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.article p:first-of-type a {
+  font-size: 16px;
+}
+
+.article p:last-of-type a {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+header nav:first-child a:hover {
+  color: white;
+}
+
+header nav:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  font-family: "Port Lligat Sans", sans-serif;
+  font-size: 14px;
+  height: 45px;
+  font-weight: 700;
+}
+
+header nav:nth-child(2) a:hover {
+  color: black;
+}
+
+header button {
+  padding: 15px;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid lightgrey;
+}
+
+header nav:nth-child(2) button:last-child {
+  display: none;
+}
+
+header > div {
+  background-color: #fd3;
+  font-family: "Heebo", sans-serif;
+  font-size: 12px;
+  padding: 5px 20px;
+}
+
+/* Main Grid Styles */
+main {
+  padding-top: 105px;
+}
+
+.grid-heading {
+  color: #f42;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+/* .article Section Styles */
+.article > h2 {
+  display: none;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.popular-grid > div {
+  padding-bottom: 30px;
+}
+
+.company > div {
+  background-color: #ffebe8;
+  padding: 10px 0 10px 80px;
+}
+
+.funding-grid > div {
+  position: relative;
+  background-color: #fffaf8;
+}
+
+.article > div:nth-child(1) {
+  grid-row: 1/3;
+  background: linear-gradient(to bottom right, rgba(231, 39, 39, 0.73), rgba(245, 246, 252, 0.05)), url(./images/water-crossing.jpg);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article > div:nth-child(2) {
+  background: linear-gradient(to bottom, rgba(36, 35, 35, 0.73), rgba(0, 0, 0, 0.05)), url(./images/calories.png);
+  height: 220px;
+}
+
+.article > div:nth-child(3) {
+  background: url(./images/china-malware.jpg);
+  height: 220px;
+}
+
+.article img {
+  width: 400px;
+  height: 150px;
+}
+
+.article .logo > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+
+.article .text {
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.popular-grid ul li a:hover {
+  color: rgb(3, 3, 3);
+}
+
+footer nav ul:nth-child(2) a:hover {
+  color: white;
+  font-weight: 500;
+}
+
+.article div:not(:first-child) p:last-of-type a {
+  font-size: 28px;
+}
+
+.article div:not(:first-child) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Latest News Grid  & Deals Grid */
+
+.latest {
+  margin: 50px 100px;
+}
+
+.news-grid,
+.deals-grid {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.news-grid img,
+.microsoft-grid img,
+.deals-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.news-grid .img-caption,
+.microsoft-grid .img-caption,
+.deals-grid .img-caption {
+  color: black;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.imgs-container > div:nth-child(2) p:last-of-type a {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.deals-grid p {
+  font-size: 14px;
+}
+
+.imgs-container > div:nth-child(2) p,
+.imgs-container > div:nth-child(2) p:last-of-type a {
+  font-size: 12px;
+  color: #f42;
+}
+
+.news-grid .img-caption:hover,
+.microsoft-grid .img-caption:hover,
+.deals-grid .img-caption:hover,
+.imgs-container > div:nth-child(2) p:last-of-type a:hover {
+  color: #f42;
+  text-decoration: underline;
+}
+
+/* Microsoft Grid */
+.microsoft-grid,
+.funding-grid {
+  display: grid;
+  grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Funding Grid Styles */
+.funding-grid-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.imgs-container img {
+  width: 100px;
+  height: 100px;
+}
+
+.funding-grid div > img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.funding-grid .company {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.funding-grid h4 {
+  background-color: #f42;
+  padding: 10px 0 10px 80px;
+}
+
+.funding-grid > div > ul li:last-child {
+  border-top: 2px solid #ffebe8;
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+footer i.fa {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #333;
+  border: 2px solid #333;
+}
+
+.funding-grid i.fa {
+  padding-right: 10px;
+}
+
+/* popular Grid */
+.popular-grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-auto-rows: minmax(400px, auto);
+  grid-gap: 10px;
+}
+
+.imgs-container > div:first-child {
+  background: linear-gradient(to bottom, rgba(128, 128, 128, 0.089), rgba(0, 0, 0, 0.918)), url(./images/Annotation-2019-09-19-121214-368x276.png);
+  height: 300px;
+}
+
+.imgs-container > div:nth-child(2) {
+  background: rgba(255, 192, 203, 0.226);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+
+.app-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.app-img .text p:first-of-type {
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.app-img .text p:last-of-type {
+  font-weight: 700;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.popular-grid > div > ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1%;
+}
+
+/* deals grid styles */
+
+.deals-grid span {
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.deals-grid figure {
+  padding-bottom: 20px;
+}
+
+/* Footer styles */
+footer i.fa:hover {
+  background-color: transparent;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1024px) {
+  .latest {
+    margin: 5% 3%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .latest {
+    margin: 10px;
+  }
+
+  header nav:nth-child(1) ul:first-child::before {
+    content: "";
+    height: 100px;
+    width: 200px;
+    background: url(./images/logo.png) no-repeat;
+    position: absolute;
+    margin: -10px -20px;
+    background-size: 100px 80px;
+  }
+
+  header > nav > ul > li:first-child {
+    padding-left: 100px;
+  }
+
+  header > nav:first-child > ul > li:last-child {
+    display: none;
+  }
+
+  .article .logo {
+    display: none;
+  }
+
+  .article > div:nth-child(1) {
+    background: url(./images/water-crossing.jpg);
+    height: 250px;
+    flex-direction: row;
+    justify-content: end;
+  }
+
+  .article > div:nth-child(2),
+  .article > div:nth-child(3) {
+    height: 122px;
+  }
+
+  .article p:last-of-type a {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .article > div:nth-child(3) > div > p:nth-child(1) > a {
+    display: none;
+  }
+
+  .article {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .news-grid,
+  .deals-grid {
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  }
+
+  .microsoft-grid {
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  }
+
+  .funding-grid {
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+  }
+
+  .funding-grid > div:nth-child(4) {
+    display: none;
+  }
+
+  .popular-grid {
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header > nav > ul > li:first-child {
+    padding: 0;
+  }
+
+  header nav:first-child {
+    display: none;
+  }
+
+  header nav:nth-child(2) li:not(:first-child) {
+    display: none;
+  }
+
+  main {
+    padding-top: 50px;
+  }
+
+  header nav:nth-child(2) ul > li:first-child::before {
+    content: "";
+    height: 100px;
+    width: 200px;
+    background: url(./images/logo.png) no-repeat;
+    position: absolute;
+    margin: -20px;
+    background-size: 75px 53px;
+  }
+
+  header nav:nth-child(2) button:last-child {
+    display: inline;
+  }
+
+  .article {
+    grid-template-columns: 1fr;
+  }
+
+  .article > div:nth-child(1),
+  .article > div:nth-child(2),
+  .article > div:nth-child(3) {
+    height: 122px;
+  }
+
+  .article div:not(:first-child) p:last-of-type a {
+    font-size: 20px;
+  }
+
+  .news-grid,
+  .deals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-grid img,
+  .microsoft-grid img,
+  .deals-grid img {
+    width: 90px;
+    height: 90px;
+    padding-right: 20px;
+  }
+
+  .news-grid figure,
+  .microsoft-grid figure,
+  .deals-grid figure {
+    display: flex;
+    align-items: center;
+  }
+
+  .microsoft-grid,
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funding-grid > div:nth-child(4) {
+    visibility: hidden;
+  }
+
+  .funding-grid-head,
+  .funding-grid-head ul {
+    display: block;
+  }
+
+  .vert {
+    display: none;
+  }
+
+  .popular-grid {
+    grid-template-columns: 1fr;
+  }
+}
