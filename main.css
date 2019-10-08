@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Heebo|Merriweather+Sans|Port+Lligat+Sans&display=swap");
 /*
 font styles used:
 font-family: 'Heebo', sans-serif;
 font-family: 'Port Lligat Sans', sans-serif;
 font-family: 'Merriweather Sans', sans-serif;
 */
+@import url("https://fonts.googleapis.com/css?family=Heebo|Merriweather+Sans|Port+Lligat+Sans&display=swap");
 
 * {
   margin: 0;
@@ -19,6 +19,11 @@ header {
   z-index: 1000;
 }
 
+footer nav {
+  background-color: #131313;
+  padding: 30px 0;
+}
+
 header nav:first-child {
   display: flex;
   justify-content: space-between;
@@ -29,6 +34,31 @@ header nav:first-child {
   height: 30px;
 }
 
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.popular-grid ul {
+  list-style: none;
+  padding-left: 5px;
+}
+
+.funding-grid-head ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.funding-grid > div > ul {
+  list-style: none;
+  padding-left: 10px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 14px;
+}
+
 header nav:first-child ul,
 header nav:nth-child(2) ul {
   display: flex;
@@ -37,15 +67,141 @@ header nav:nth-child(2) ul {
   margin: 0 20px;
 }
 
+footer nav ul:nth-child(2) {
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+.article-box .text ul,
+.app-img .text ul {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-end;
+  list-style: none;
+}
+
+footer nav li {
+  padding-right: 20px;
+}
+
+.funding-grid-head li {
+  color: #f42;
+}
+
+.popular-grid ul li {
+  padding: 2%;
+  border-bottom: 1px solid gray;
+}
+
 header nav:first-child li,
 header nav:nth-child(2) li {
   margin-right: 10px;
 }
 
+footer p {
+  background-color: black;
+  padding: 20px 0;
+  text-align: center;
+  color: grey;
+  font-size: 12px;
+}
+
+.funding-grid > div > ul li {
+  margin: 10px 0;
+}
+
+article .text ul > li,
+.app-img .text ul > li,
+article a,
+.logo p {
+  color: lightgray;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+article a,
+article i {
+  text-decoration: none;
+  color: lightgray;
+}
+
 header a,
-header i {
+header i,
+.news-grid p,
+.news-grid a,
+.microsoft-grid p,
+.deals-grid p,
+.deals-grid a,
+.microsoft-grid a {
   text-decoration: none;
   color: grey;
+}
+
+.news-grid p,
+.news-grid a,
+.microsoft-grid p,
+.deals-grid p,
+.deals-grid a {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 10px;
+}
+
+.funding-grid-head a {
+  text-decoration: none;
+  padding: 0 5px;
+  color: #f42;
+}
+
+.article-box p a,
+article a:hover {
+  color: white;
+}
+
+footer p > a:nth-child(2) {
+  font-family: "Port Lligat Sans", sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.popular-grid ul li a {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+}
+
+article p:first-of-type a {
+  font-size: 16px;
+}
+
+article p:last-of-type a {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+footer nav ul:nth-child(2) a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.funding-grid > div > ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-img .text a {
+  text-decoration: none;
+  color: white;
+}
+
+.funding-grid-head a:hover {
+  color: black;
+}
+
+.news-grid a:hover,
+.microsoft-grid a:hover,
+.deals-grid a:hover {
+  color: black;
+  text-decoration: none;
 }
 
 header nav:first-child a:hover {
@@ -75,7 +231,7 @@ header button {
 }
 
 header > div {
-  background-color: #ffdd33;
+  background-color: #fd3;
   font-family: "Heebo", sans-serif;
   font-size: 12px;
   padding: 5px 20px;
@@ -87,7 +243,7 @@ main {
 }
 
 .grid-heading {
-  color: #ff4422;
+  color: #f42;
   font-family: "Merriweather Sans", sans-serif;
   font-size: 32px;
   font-weight: bold;
@@ -95,9 +251,10 @@ main {
 }
 
 /* Article Section Styles */
-article> h2{
+article > h2 {
   display: none;
 }
+
 article {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -105,14 +262,23 @@ article {
   grid-gap: 5px;
 }
 
+.popular-grid > div {
+  padding-bottom: 30px;
+}
+
+.company > div {
+  background-color: #ffebe8;
+  padding: 10px 0 10px 80px;
+}
+
+.funding-grid > div {
+  position: relative;
+  background-color: #fffaf8;
+}
+
 article > div:nth-child(1) {
   grid-row: 1/3;
-  background: linear-gradient(
-      to bottom right,
-      rgba(231, 39, 39, 0.73),
-      rgba(245, 246, 252, 0.05)
-    ),
-    url(./images/water-crossing.jpg);
+  background: linear-gradient(to bottom right, rgba(231, 39, 39, 0.73), rgba(245, 246, 252, 0.05)), url(./images/water-crossing.jpg);
   height: 450px;
   display: flex;
   flex-direction: column;
@@ -120,12 +286,7 @@ article > div:nth-child(1) {
 }
 
 article > div:nth-child(2) {
-  background: linear-gradient(
-      to bottom,
-      rgba(36, 35, 35, 0.73),
-      rgba(0, 0, 0, 0.05)
-    ),
-    url(./images/calories.png);
+  background: linear-gradient(to bottom, rgba(36, 35, 35, 0.73), rgba(0, 0, 0, 0.05)), url(./images/calories.png);
   height: 220px;
 }
 
@@ -134,29 +295,9 @@ article > div:nth-child(3) {
   height: 220px;
 }
 
-article p a,
-article a:hover {
-  color: white;
-}
-
-article p:first-of-type a {
-  font-size: 16px;
-}
-
-article p:last-of-type a {
-  font-size: 40px;
-  font-weight: 700;
-}
-
 article img {
   width: 400px;
   height: 150px;
-}
-
-article a,
-article i {
-  text-decoration: none;
-  color: lightgray;
 }
 
 article .logo > div {
@@ -171,21 +312,8 @@ article .text {
   margin-bottom: 20px;
 }
 
-article .text ul,
-.app-img .text ul {
-  display: flex;
-  justify-content: flex-start;
-  align-content: flex-end;
-  list-style: none;
-}
-
-article .text ul > li,
-.app-img .text ul > li,
-article a,
-.logo p {
-  color: lightgray;
-  margin-right: 10px;
-  font-size: 14px;
+.popular-grid ul li a:hover {
+  color: rgb(3, 3, 3);
 }
 
 article div:not(:first-child) p:last-of-type a {
@@ -230,30 +358,33 @@ article div:not(:first-child) {
   cursor: pointer;
 }
 
+footer nav ul:nth-child(2) a:hover {
+  color: white;
+  font-weight: 500;
+}
+
+.imgs-container > div:nth-child(2) p:last-of-type a {
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.deals-grid p {
+  font-size: 14px;
+}
+
+.imgs-container > div:nth-child(2) p,
+.imgs-container > div:nth-child(2) p:last-of-type a {
+  font-size: 12px;
+  color: #f42;
+}
+
 .news-grid .img-caption:hover,
 .microsoft-grid .img-caption:hover,
 .deals-grid .img-caption:hover,
 .imgs-container > div:nth-child(2) p:last-of-type a:hover {
-  color: #ff4422;
+  color: #f42;
   text-decoration: underline;
-}
-
-.news-grid p,
-.news-grid a,
-.microsoft-grid p,
-.deals-grid p,
-.deals-grid a {
-  color: grey;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 10px;
-  text-decoration: none;
-}
-
-.news-grid a:hover,
-.microsoft-grid a:hover,
-.deals-grid a:hover {
-  color: black;
-  text-decoration: none;
 }
 
 /* Microsoft Grid */
@@ -262,11 +393,6 @@ article div:not(:first-child) {
   display: grid;
   grid-template: repeat(1, 1fr) / repeat(4, 1fr);
   grid-gap: 10px;
-}
-
-.microsoft-grid a {
-  text-decoration: none;
-  color: grey;
 }
 
 /* Funding Grid Styles */
@@ -278,28 +404,9 @@ article div:not(:first-child) {
   cursor: pointer;
 }
 
-.funding-grid-head ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.funding-grid-head li {
-  color: #ff4422;
-}
-.funding-grid-head a {
-  text-decoration: none;
-  padding: 0 5px;
-  color: #ff4422;
-}
-
-.funding-grid-head a:hover {
-  color: black;
-}
-
-.funding-grid > div {
-  position: relative;
-  background-color: #fffaf8;
+.imgs-container img {
+  width: 100px;
+  height: 100px;
 }
 
 .funding-grid div > img {
@@ -317,34 +424,22 @@ article div:not(:first-child) {
 }
 
 .funding-grid h4 {
-  background-color: #ff4422;
+  background-color: #f42;
   padding: 10px 0 10px 80px;
-}
-
-.company > div {
-  background-color: #ffebe8;
-  padding: 10px 0 10px 80px;
-}
-
-.funding-grid > div > ul {
-  list-style: none;
-  padding-left: 10px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 14px;
-}
-.funding-grid > div > ul li {
-  margin: 10px 0;
-}
-
-.funding-grid > div > ul li a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .funding-grid > div > ul li:last-child {
   border-top: 2px solid #ffebe8;
   padding: 20px 0;
   font-size: 12px;
+}
+
+footer i.fa {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #333;
+  border: 2px solid #333;
 }
 
 .funding-grid i.fa {
@@ -359,17 +454,8 @@ article div:not(:first-child) {
   grid-gap: 10px;
 }
 
-.popular-grid > div {
-  padding-bottom: 30px;
-}
-
 .imgs-container > div:first-child {
-  background: linear-gradient(
-      to bottom,
-      rgba(128, 128, 128, 0.089),
-      rgba(0, 0, 0, 0.918)
-    ),
-    url(./images/Annotation-2019-09-19-121214-368x276.png);
+  background: linear-gradient(to bottom, rgba(128, 128, 128, 0.089), rgba(0, 0, 0, 0.918)), url(./images/Annotation-2019-09-19-121214-368x276.png);
   height: 300px;
 }
 
@@ -381,32 +467,10 @@ article div:not(:first-child) {
   padding: 2%;
 }
 
-.imgs-container > div:nth-child(2) p,
-.imgs-container > div:nth-child(2) p:last-of-type a {
-  font-size: 12px;
-  color: #ff4422;
-}
-
-.imgs-container > div:nth-child(2) p:last-of-type a {
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.imgs-container img {
-  width: 100px;
-  height: 100px;
-}
-
 .app-img {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-}
-
-.app-img .text a {
-  text-decoration: none;
-  color: white;
 }
 
 .app-img .text p:first-of-type {
@@ -420,11 +484,6 @@ article div:not(:first-child) {
   padding-left: 10px;
 }
 
-.popular-grid ul {
-  list-style: none;
-  padding-left: 5px;
-}
-
 .popular-grid > div > ul li::before {
   content: "\2022";
   color: red;
@@ -434,25 +493,7 @@ article div:not(:first-child) {
   margin-left: -1%;
 }
 
-.popular-grid ul li {
-  padding: 2%;
-  border-bottom: 1px solid gray;
-}
-
-.popular-grid ul li a {
-  text-decoration: none;
-  color: gray;
-  font-size: 14px;
-}
-
-.popular-grid ul li a:hover {
-  color: rgb(3, 3, 3);
-}
-
 /* deals grid styles */
-.deals-grid p {
-  font-size: 14px;
-}
 
 .deals-grid span {
   text-decoration: line-through;
@@ -462,70 +503,18 @@ article div:not(:first-child) {
 .deals-grid figure {
   padding-bottom: 20px;
 }
+
 /* Footer styles */
-
-footer nav {
-  background-color: #131313;
-  padding: 30px 0;
-}
-footer nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
-footer nav li {
-  padding-right: 20px;
-}
-
-footer nav ul:nth-child(2) {
-  padding: 20px 0;
-  font-size: 12px;
-}
-
-footer nav ul:nth-child(2) a {
-  text-decoration: none;
-  color: lightgray;
-}
-
-footer nav ul:nth-child(2) a:hover {
-  color: white;
-  font-weight: 500;
-}
 
 footer i {
   color: white;
-}
-footer i.fa {
-  display: inline-block;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: #333;
-  border: 2px solid #333;
 }
 
 footer i.fa:hover {
   background-color: transparent;
 }
 
-footer p {
-  background-color: black;
-  padding: 20px 0;
-  text-align: center;
-  color: grey;
-  font-size: 12px;
-}
-
-footer p > a:nth-child(2) {
-  font-family: "Port Lligat Sans", sans-serif;
-  font-size: 14px;
-  color: white;
-}
-
-/* -------------------
-     Media Queries 
----------------------- */
+/* Media Queries */
 @media screen and (min-width: 1024px) {
   .latest {
     margin: 5% 3%;
@@ -622,6 +611,7 @@ footer p > a:nth-child(2) {
   main {
     padding-top: 50px;
   }
+
   header nav:nth-child(2) ul > li:first-child::before {
     content: "";
     height: 100px;
@@ -650,6 +640,7 @@ footer p > a:nth-child(2) {
   .deals-grid {
     grid-template-columns: 1fr;
   }
+
   .news-grid img,
   .microsoft-grid img,
   .deals-grid img {
