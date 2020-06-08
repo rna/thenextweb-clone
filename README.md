@@ -1,6 +1,9 @@
 # The Next Web Clone
 This project clones the responsive design of TheNextWeb website home page
 
+## Screenshot
+![The Next Web Homepage](https://i.imgur.com/YuoZF6k.png)
+
 ## Description
 This project is a clone of  The Next Web website home page. This project was done in order to solidify our knowledge in the concepts of HTML and CSS especially in the areas of:
 - Media Queries
